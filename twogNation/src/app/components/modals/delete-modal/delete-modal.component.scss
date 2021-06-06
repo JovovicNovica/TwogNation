@@ -1,0 +1,29 @@
+.delete-modal {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  &__btn {
+    width: 100px;
+    height: 40px;
+    background-color: var(--bs-gray);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bs-light);
+    cursor: pointer;
+
+    &--accept {
+      background-color: var(--bs-green);
+    }
+  }
+}
