@@ -1,0 +1,55 @@
+@import "src/scss/variables";
+@import "src/scss/functions";
+@import "src/scss/mixins";
+
+%center-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-page {
+  background: radial-gradient(circle, color($background-first-color, 0.9978011913513869) 14%, color($background-second-color, 0.8910596183176791) 90%);
+  width: 100vw;
+  height: 100vh;
+  @extend %center-content;
+}
+
+.login {
+  font-size: 24px;
+  width: 450px;
+  height: 330px;
+  @extend %center-content;
+  flex-direction: column;
+  background: var(--bs-light);
+  border-radius: 1%;
+  @include padding-margin(20, 20);
+
+  &__title {
+    color: var(--bs-dark);
+    @include padding-margin(0, 25);
+    text-transform: uppercase;
+  }
+
+  &__input-boxes {
+    width: 100%;
+  }
+
+  &__input-box {
+    display: flex;
+  }
+
+  &__button-box {
+    @include margin(25, 0, 0, 0);
+    width: 150px;
+  }
+}
+
+::ng-deep .mat-raised-button {
+  width: 100% !important;
+}
+
+::ng-deep mat-form-field {
+  width: 100%;
+  font-size: 16px !important;
+}

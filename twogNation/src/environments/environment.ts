@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiURL: 'https://staging.apo.twoghub.com',
+  apiURL: 'https://staging.api.twoghub.com',
 };
 
 /*

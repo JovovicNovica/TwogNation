@@ -1,5 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/bootstrap/scss/bootstrap";
+@import "scss/reset";
+@import "scss/functions";
+@import "scss/variables";
+@import "scss/mixins";
+@import "scss/break-points";
 
 html, body {
   height: 100%;
@@ -8,4 +13,9 @@ html, body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+.cdk-overlay-dark-backdrop {
+  background: rgba(0, 0, 0, .62);
 }

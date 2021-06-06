@@ -1,0 +1,6 @@
+/*
+ * SET BACKGROUND GRADIENT
+ */
+@function color($color, $alpha) {
+  @return rgba($color, $alpha)
+}

@@ -1,0 +1,11 @@
+<section class="tournament-card" *ngFor="let tournament of tournaments">
+  <img class="tournament-card__logo" [src]="tournament.game.logo" alt=""/>
+  <div class="tournament-card__name-box">
+    <div class="tournament-card__title">{{tournament.game?.name}}</div>
+    <div class="tournament-card__tournament">{{tournament.name}}</div>
+  </div>
+  <div class="tournament-card__date-box">
+    <div class="tournament-card__date">{{tournament.startDate | date: 'd. MMMM y. hh:mm (z)'}}</div>
+    <div class="tournament-card__delete" (click)="openDeleteModal(tournament)">delete</div>
+  </div>
+</section>

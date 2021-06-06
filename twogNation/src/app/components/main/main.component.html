@@ -1,0 +1,24 @@
+<section class="main">
+  <header class="header">
+    <span class="material-icons header__white">account_circle</span>
+    <div class="header__links">{{user?.firstName}} {{user?.lastName}}</div>
+    <p class="header__vertical-line" *ngIf="user?.firstName || user?.lastName"></p>
+    <div class="header__links">{{user?.login}}</div>
+    <p class="header__vertical-line"></p>
+    <div class="header__links" *ngIf="authService.isLoggedIn$ | async" (click)="authService.logOut()">
+      <span class="material-icons header__white">logout</span>
+    </div>
+  </header>
+  <ngx-spinner style="color: var(--bs-light)" bdColor="rgba(0, 0, 0, 0.5)" size="large" color="#fff"
+               type="ball-spin-clockwise">Loading...
+  </ngx-spinner>
+  <div class="tournaments" infiniteScroll
+       [infiniteScrollDistance]="2"
+       [infiniteScrollThrottle]="50"
+       (scrolled)="onScrollDown()"
+       [scrollWindow]="false"
+  >
+    <app-tournaments-card *ngIf="!emptyArray"></app-tournaments-card>
+    <div class="no-tournamnets" *ngIf="emptyArray">There is no tournaments!</div>
+  </div>
+</section>

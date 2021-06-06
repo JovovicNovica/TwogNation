@@ -1,12 +1,14 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 
-import { MatButtonModule } from '@angular/material/button';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [],
-  imports: [MatDialogModule, MatButtonModule, MatProgressSpinnerModule],
-  exports: [MatDialogModule, MatButtonModule, MatProgressSpinnerModule],
+  imports: [MatInputModule, MatDialogModule, MatButtonModule, MatSnackBarModule],
+  exports: [MatInputModule, MatDialogModule, MatButtonModule, MatSnackBarModule],
 })
-export class MaterialModule {}
+export class MaterialModule {
+}

@@ -1,1 +1,20 @@
-<p>login works!</p>
+<section class="login-page">
+  <form class="login" [formGroup]="signInForm" (ngSubmit)="logIn()">
+    <h2 class="login__title">log in</h2>
+    <div class="login__input-boxes">
+      <div class="login__input-box">
+        <mat-form-field>
+          <input matInput placeholder="Email" value="" formControlName="username">
+        </mat-form-field>
+      </div>
+      <div class="login__input-box">
+        <mat-form-field>
+          <input type="password" matInput placeholder="Password" value="" formControlName="password">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="login__button-box">
+      <button mat-raised-button color="primary" style="text-transform: uppercase;">Log in</button>
+    </div>
+  </form>
+</section>

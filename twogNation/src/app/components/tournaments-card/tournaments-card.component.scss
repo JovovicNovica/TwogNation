@@ -1,0 +1,70 @@
+@import "src/scss/variables";
+@import "src/scss/break-points";
+@import "src/scss/mixins";
+
+.tournament-card {
+  display: flex;
+  background: var(--bs-white);
+  border-bottom: 1px solid var(--bs-dark);
+  padding: 10px 20px;
+
+  @include lg {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__logo {
+    height: 40px;
+    width: 40px;
+    margin: 0 20px 0 0;
+
+    @include lg {
+      @include margin(10, 0, 10, 0);
+    }
+  }
+
+  &__name-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include lg {
+      margin: 10px 0;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    @include lg {
+      margin: 10px 0;
+      align-items: center;
+    }
+  }
+
+  &__date-box {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include lg {
+      align-items: center;
+    }
+  }
+
+  &__delete {
+    border: 1px solid #00c401;
+    color: #00c401;
+    margin: 10px 0 0 0;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    width: 78px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,12 @@
+@mixin padding-margin($padding, $margin) {
+  padding: $padding + px;
+  margin: $margin + px;
+}
+
+@mixin padding($top:0, $right:0, $down:0, $left:0) {
+  padding: $top + px $right + px $down + px $left + px;
+}
+
+@mixin margin($top:0, $right:0, $down:0, $left:0) {
+  margin: $top + px $right + px $down + px $left + px;
+}
